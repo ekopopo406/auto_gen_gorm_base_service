@@ -1,5 +1,5 @@
-生成的文件结构
-
+#生成的文件结构
+<pre>
 gen/
 ├── model/
 │   └── users.go              # GORM 模型，包含钩子函数
@@ -13,9 +13,9 @@ gen/
 │   └── users_dto.go          # 请求/响应 DTO
 └── handler/
     └── users_handler.go      # HTTP Handler
-
-
-GORM 特性支持:
+</pre>
+<pre>
+#GORM 特性支持:
 
 生成的代码支持以下 GORM 特性：
 软删除：如果表有 deleted_at 字段，自动支持软删除
@@ -24,9 +24,9 @@ GORM 特性支持:
 事务支持：可以在 Service 层使用 GORM 事务
 关联查询：可根据需要添加 Preload、Joins 等
 批量操作：支持批量创建
-
-
-你可以通过修改 main.go 中的配置来定制生成的代码：
+</pre>
+<pre>
+#你可以通过修改 main.go 中的配置来定制生成的代码：
 cfg := &Config{
     DBType:  "mysql",                                    // 数据库类型
     DSN:     "root:123456@tcp(127.0.0.1:3306)/mydb?...", // 连接字符串
@@ -35,3 +35,4 @@ cfg := &Config{
     Module:  "github.com/myproject/server",              // Go module
     Package: "internal",                                 // 包名
 }
+</pre>
